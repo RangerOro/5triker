@@ -6,7 +6,7 @@ Strikes are something inmaterial that players may have in their server, based on
 For example, in a Minecraft server, a player broke rule A which has a value of 1 strike --> the player who broke the rule may get punished with 1 strike.
 
 You shall specify a maximum of strikes people can have and for how much time they will be banned after reaching the strike maximum.
-(This isn't currently available as it does not feature a configuration file, which I'll soon add!)
+This can be made in the config.yml file you see in the 5triker folder after uploading the JAR file and starting your server.
 
 Note that strikes are only issued when you run the specific command to punish a player, it is not automated!
 
