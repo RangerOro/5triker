@@ -1,7 +1,7 @@
 # 5triker
 ### A Minecraft Paper/Spigot plugin to handle moderation in your server!
 
-**5triker** is a Minecraft Paper (version 1.21) plugin which can handle moderation in your server using **strikes**.
+**5triker** is a Minecraft Paper/Spigot (version 1.21) plugin which can handle moderation in your server using **strikes**.
 Strikes are something inmaterial that players may have in their server, based on **how much times and which rules have players broke.**
 For example, in a Minecraft server, a player broke rule A which has a value of 1 strike --> the player who broke the rule may get punished with 1 strike.
 
