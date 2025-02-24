@@ -9,3 +9,5 @@ You shall specify a maximum of strikes people can have and for how much time the
 (This isn't currently available as it does not feature a configuration file, which I'll soon add!)
 
 Note that strikes are only issued when you run the specific command to punish a player, it is not automated!
+
+[More info](https://github.com/RangerOro/5triker.wiki.git)
