@@ -1,0 +1,27 @@
+name: 5Triker
+version: "1.0.6"
+main: org.example.TrikerPlugin
+api-version: "1.13"
+commands:
+  s:
+    description: Main command for FiveTriker.
+    usage: /s [list of commands]
+permissions:
+  fivetriker.punish:
+    description: Allows punishing players.
+    default: op
+  fivetriker.remove:
+    description: Allows removing strikes from players.
+    default: op
+  fivetriker.edit:
+    description: Allows editing rules.
+    default: op
+  fivetriker.log:
+    description: Allows viewing the log of moderation actions.
+    default: op
+  fivetriker.list:
+    description: Allows viewing striked players
+    default: op
+  fivetriker.inspect:
+    description: Allows inspecting other players
+    default: op

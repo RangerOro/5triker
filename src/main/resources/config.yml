@@ -1,0 +1,38 @@
+# 5Triker Plugin Configuration
+
+# Maximum strikes allowed before a player is banned.
+# Set to a value > 0. When a player's strikes reach this limit, they will be banned.
+max-strikes: 5.0
+
+# Ban duration in milliseconds.
+# Set to 0 for a permanent ban.
+ban-duration: 31536000000   # 1 year in milliseconds
+
+# Automatically unban players if their strikes drop below the max-strikes value.
+auto-unban: true
+
+# Default rules and their corresponding strike values.
+rules:
+  1A: 0.25
+  1B: 1.0
+  1C: 5.0
+  1D: 1.0
+  2A: 0.25
+  2B: 1.0
+  2C: 3.0
+  3A: 5.0
+  3B: 0.25
+
+# Custom messages used by the plugin.
+messages:
+  insufficient-permission: "&cYou don't have permission to use this command."
+  player-not-found: "&cPlayer not found: %player%"
+  punish-success: "&aAdded %strikes% strikes to %player%. New total: %total%."
+  remove-success: "&aRemoved %strikes% strikes from %player%."
+  ban-message: "&cYou have been banned for exceeding %max% strikes."
+  unban-message: "&a%player% has been unbanned because their strikes are now below %max%."
+  info:
+    header: "&e5Triker Plugin v%version%"
+    author: "&aDeveloped by Ranger_Oro"
+    designer: "&aDesigned by Aemadeous"
+    description: "&aTracks and manages strikes for rule enforcement."
