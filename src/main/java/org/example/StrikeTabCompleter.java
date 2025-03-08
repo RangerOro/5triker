@@ -16,7 +16,6 @@ public class StrikeTabCompleter implements TabCompleter {
         List<String> completions = new ArrayList<>();
 
         if (args.length == 1) {
-            // Suggest main commands
             completions.add("punish");
             completions.add("remove");
             completions.add("edit");
@@ -30,7 +29,6 @@ public class StrikeTabCompleter implements TabCompleter {
                 case "punish":
                 case "remove":
                 case "inspect":
-                    // Suggest online player names
                     completions.addAll(Bukkit.getOnlinePlayers().stream()
                             .map(player -> player.getName())
                             .collect(Collectors.toList()));
@@ -42,7 +40,6 @@ public class StrikeTabCompleter implements TabCompleter {
                     break;
                 case "log":
                 case "list":
-                    // Suggest page numbers
                     completions.add("1");
                     completions.add("2");
                     completions.add("3");
@@ -50,14 +47,11 @@ public class StrikeTabCompleter implements TabCompleter {
             }
         } else if (args.length == 3) {
             if (args[0].equalsIgnoreCase("punish")) {
-                // Suggest existing rule names
                 completions.addAll(TrikerPlugin.rules.keySet());
             } else if (args[0].equalsIgnoreCase("edit")) {
                 if (args[1].equalsIgnoreCase("delete") || args[1].equalsIgnoreCase("change")) {
-                    // Suggest existing rule names for delete and change
                     completions.addAll(TrikerPlugin.rules.keySet());
                 } else if (args[1].equalsIgnoreCase("add")) {
-                    // Suggest some rule format examples for adding new rules
                     completions.add("1A");
                     completions.add("1B");
                     completions.add("2A");
@@ -65,7 +59,6 @@ public class StrikeTabCompleter implements TabCompleter {
                     completions.add("CUSTOM1");
                 }
             } else if (args[0].equalsIgnoreCase("remove")) {
-                // Suggest online player names for the second parameter of remove
                 completions.addAll(Bukkit.getOnlinePlayers().stream()
                         .map(player -> player.getName())
                         .collect(Collectors.toList()));
@@ -73,7 +66,6 @@ public class StrikeTabCompleter implements TabCompleter {
         } else if (args.length == 4) {
             if (args[0].equalsIgnoreCase("edit")) {
                 if (args[1].equalsIgnoreCase("add") || args[1].equalsIgnoreCase("change")) {
-                    // Suggest some common strike values
                     completions.add("0.25");
                     completions.add("0.5");
                     completions.add("1.0");
@@ -82,7 +74,6 @@ public class StrikeTabCompleter implements TabCompleter {
                     completions.add("5.0");
                 }
             } else if (args[0].equalsIgnoreCase("punish")) {
-                // Suggest some common clarifications
                 completions.add("Spamming");
                 completions.add("Hacking");
                 completions.add("Homophobia");
@@ -90,7 +81,6 @@ public class StrikeTabCompleter implements TabCompleter {
             }
         }
 
-        // Filter completions based on what the user has already typed
         String lastArg = args[args.length - 1].toLowerCase();
         return completions.stream()
                 .filter(s -> s.toLowerCase().startsWith(lastArg))
